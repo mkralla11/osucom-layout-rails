@@ -1,0 +1,496 @@
+/* == OSUCOM Styles ========================================================= */
+
+html, body { background:#EAEBEB; }
+
+body {
+  margin: 0;
+  padding: 0 0 8px 0;
+  font: normal 100% Arial, Helvetica, sans-serif;
+}
+
+img { border: none; max-width: 100%; }
+
+.info, .success, .warning, .error, .validation, .notice {
+  border: 1px solid;
+  margin: 10px 0px;
+  padding: 15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+.info {
+  color: #00529B;
+  background-color: #BDE5F8;
+  background-image: image-url('icons/info.png');
+}
+.success {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  background-image: image-url('icons/success.png');
+}
+.warning, .notice {
+  color: #9F6000;
+  background-color: #FEEFB3;
+  background-image: image-url('icons/warning.png');
+}
+.error {
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: image-url('icons/error.png');
+}
+
+h2 {
+  font-weight: bolder;
+  /*color:#990000;*/
+  color:#806553;
+}
+
+h3 {
+  font-weight: bolder;
+  color:#333;
+}
+
+a:active {
+  color:#990000;
+  text-decoration:none;
+}
+
+a:link {
+  color:#990000;
+  text-decoration:none;
+}
+
+a:visited {
+  color:#990000;
+  text-decoration:none;
+}
+
+a:hover {
+  color:#990000;
+  text-decoration:underline;
+}
+
+#container {
+  max-width: 960px;
+  min-height:100px;
+  background:#fff image-url('layout/content_background.jpg') repeat-x top left;
+  border-top:2px solid #990000;
+  border-right:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  border-left:1px solid #ccc;
+  margin:0px auto 0px auto;
+  position:relative;
+  overflow: hidden;
+  /*z-index:0;*/
+}
+
+#content { padding: 1em; }
+
+/* ========================================================================================================= */
+/* OSUMC Brand Header */
+/* ========================================================================================================= */
+
+#osumc_brand_header {
+  max-width: 962px; /* not inside container */
+  margin: 8px auto 8px auto;
+  font-family:Arial, Helvetica, sans-serif;
+  height:18px;
+  z-index:1;
+  position:relative;
+}
+
+#osumc_brand_header ul#brand {
+  float:left;
+  text-align:left;
+  list-style:none;
+  margin:0px;
+  padding:0px;
+  height:18px;
+  position:relative;
+}
+
+#osumc_brand_header li {
+  display:inline;
+  margin:0px;
+  padding:0px;
+  float:left;
+  height:18px;
+}
+
+#osumc_brand_header ul#brand a {
+  color:#47382E;
+  text-decoration:none;
+  font-size: 0.75em; /* 12px / 16px */
+  margin:0px;
+  padding:1px 10px 2px 6px;
+  float:left;
+  position:relative;
+  top:0px;
+  left:0px;
+}
+
+#osumc_brand_header ul#brand a:hover {
+  color:#990000;
+  background:#fff;
+}
+
+#osumc_brand_header ul#brand li.thissite {
+  background: image-url('layout/thissite_button_background_static.png') no-repeat left top;
+  padding:0px 0px 0px 4px;
+  margin:0px 6px 0px 0px;
+}
+
+#osumc_brand_header ul#brand li.thissite a{
+  background: image-url('layout/thissite_button_background_static.png') no-repeat right top;
+  padding:1px 10px 2px 6px;
+  margin:0px -4px 0px 0px
+}
+
+#osumc_brand_header ul#brand li.thissite_divider {
+  background: image-url('layout/thissite_divider.jpg') no-repeat center right;
+}
+
+#osumc_brand_header ul#functions {
+  float: right;
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* ========================================================================================================= */
+/* header */
+/* ========================================================================================================= */
+#header {
+  //max-width: 960px;
+  width: 100%; /* 960px / 960px */
+  text-align:left;
+}
+
+a#osumc_logo {
+  float: left;
+  margin: 14px 0 0 22px;
+  text-decoration:none;
+}
+
+a#osumc_text {
+  float:left;
+  margin: 18px 0px 0px 68px;
+  text-decoration:none;
+}
+
+a#osumc_text span {
+  display: block;
+  font-size: 0.6em;
+}
+
+a#osumc_text p {
+  margin:-4px 0px 0px 2px;
+  padding:0px;
+  font-weight:bolder;
+  color:#990000;
+  font-size: 22px; /* Should be changed but we're not currently using it */
+}
+
+#aux_topnav {
+  text-align:right;
+  width: 98.75%; /* 948px / 960px */
+  float:left;
+  font-size: 0.75em; /* 12px / 16px */
+  margin: -5px 0 3px 0;
+  padding:0px 12px 0px 0px;
+  height: 35px;
+  
+  ul {
+    width: 42.1940928270042%; /* 400px / 948px */
+    float: left;
+    list-style-type: none;
+    margin-left: 280px;
+    padding: 0;
+    li {
+      float: left;
+      list-style-type: none;
+      margin-left: 20px;
+      a {
+        display: block;
+      }
+      a:hover {
+
+      }
+    }
+  }
+  
+  form { margin: 10px; }
+  input {
+    display:inline;
+    font-size: 0.916666666666667em; /* 11px / 12px */
+    font-weight:bolder;
+    color:#806553;
+  }
+  input.searchbox {
+    width: 21.0970464135021%; /* 200px / 948px */
+    text-align: center;
+    height: 19px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 14px;
+    border: 1px solid #D7D2CB;
+    vertical-align:middle;
+  }
+}
+
+#aux_topnav input.searchbutton {
+  width: 40px;
+  height: 21px;
+  margin: 0px;
+  border: none;
+  background: image-url('layout/go_button.jpg') no-repeat center center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#brand_bar {
+  width: 97.9166666666667%; /* 940px / 960px */
+  margin:0px auto 0px auto;
+  background:#990000 image-url('layout/brand_colors.gif') no-repeat top left;
+  height:4px;
+  position:relative;
+  clear:both;
+}
+
+/* ========================================================================================================= */
+/* footer */
+/* ========================================================================================================= */
+
+#footer {
+  max-width: 960px; /* not inside container */
+  min-height: 100px;
+  margin: 6px auto 30px auto;
+  background:#fff;
+  -webkit-border-bottom-left-radius:50px;
+  -khtml-border-bottom-left-radius:50px;
+  -moz-border-radius-bottomleft:50px;
+  border-radius-bottomleft:50px;
+  border:1px solid #ccc;
+  position: relative;
+
+  _height: 1%;  /* Triggers "haslayout" in Internet Explorer, by using the underscore trick to target IE6 directly. */
+}
+  
+#footer:after {  
+  content: ".";  /* After the container div, append a period. */
+  visibility: hidden;  /* We don't want to see the period, so hide it from the page. (Equal to setting opacity: 0;) */
+  display: block;  /* Forces the period to display as a block-level, rather than inline. */
+  clear: both;  /* The important property. This clears the main and sidebar divs. This is the same as adding an unsemantic <div style="clear: both;"> to our page. */
+  height: 0;  /* Don't take up any space.  */
+  font-size: 0;  /* Just a precaution for Firefox. This browser sometimes adds a bit of space after our parent element. Setting the font-size to zero fixes this.  */
+} 
+
+#footer_contact {
+  width: 29.1666666666667%; /* 280px / 960px */
+  float:left;
+  margin:25px 0px 25px 47px;
+}
+
+#footer_contact img {
+  float:left;
+  margin:0px 8px 0px 0px;
+}
+
+#footer_contact p {
+  color:#990000;
+  font-size: 0.75em; /* 12px / 16px */
+  float:left;
+  margin:0px;
+  padding:0px;
+  width: 25%; /* 240px / 960px */
+  text-align:left;
+}
+
+#footer_contact p#footer_phone {
+  font-weight:bolder;
+  font-size: 0.75em; /* 12px / 16px */
+  padding: 3px 0 0 0;
+}
+
+#footer_contact p#footer_address {
+  font-size: 0.6875em; /* 11px / 16px */
+  text-align:left;
+  color:#958579;
+  width:280px;
+  margin:8px 0px 0px 0px;
+}
+
+#footer_contact p#footer_address a {
+  color:#958579;
+  text-decoration:none;
+}
+
+#footer_contact p#footer_address a:hover {
+  color:#000;
+}
+
+#footer_links {
+  float:left;
+  padding: 0px;
+  margin: 10px 0 10px 70px;
+}
+
+#footer_links ul {
+  float:left;
+  text-align:left;
+  list-style:none;
+  margin:10px 15px 10px 0px;
+  padding:0px;
+  height:70px;
+}
+
+#footer_links ul.column_1 {
+  background: image-url('layout/footer_links_divider.jpg') no-repeat center right;
+  padding:0px 15px 0px 0px;
+}
+
+#footer_links ul li {
+  margin:0px 0px 3px 0px;
+  padding:0px;
+  font-size: 0.6875em; /* 11px / 16px */
+}
+
+#footer_links ul li a {
+  color:#958579;
+  text-decoration:none;
+}
+
+#footer_links ul li a:hover {
+  color:#000;
+  text-decoration:underline;
+}
+
+/* ========================================================================================================= */
+/* topnav */
+/* ========================================================================================================= */
+#topnav {
+  width: 97.9166666666667%; /* 940px / 960px */
+  height:39px;
+  background: image-url('layout/topnav_shine.jpg') repeat-x top left;
+  margin:1px auto 0px auto;
+  ul {
+    margin:0px 3px 0px 3px;
+    padding:0px;
+    font-weight:bold;
+    width: 99.1489361702128%; /* 932px / 940px */
+    height: 39px;
+    list-style:none;
+    background: image-url('layout/topnav_shine.jpg') repeat-x center center;
+    position: relative;
+    z-index:10;
+    li {
+      position:relative;
+      display:inline;
+      text-align:center;
+      vertical-align:middle;
+      float:left;
+      margin:0px;
+      padding:0px;
+      font-size:  0.75em; /* 12px / 16px */
+      background: image-url('layout/topnav_divider.png') no-repeat scroll right 4px transparent;
+      a {
+        text-decoration:none;
+        color:#fff;
+        padding:11px 14px 14px 12px;
+        float:left;
+        line-height: 1.166666666666667em; /* 14px / 12px */
+      }
+      a:hover {
+        color:#990000;
+        background: image-url('layout/topnav_active.png') repeat-x left bottom;
+      }
+    }
+    li.double a {
+      padding-top: 4px;
+      padding-bottom: 7px;
+    }
+    li.current a {
+      color:#990000;
+      background: image-url('layout/topnav_active.png') repeat-x center bottom;
+    }
+  }
+}
+
+/* children */
+
+#topnav ul .hasChildren ul {
+  list-style: none;
+  position: absolute;
+  left: 0; top: 39px;
+  background: #990000;
+  display: none;
+  border-bottom: 1px solid #b13d3d;
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 140px;
+  z-index: 11;
+}
+
+#topnav ul .hasChildren ul li {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #b13d3d;
+  border-left: 1px solid #b13d3d;
+  border-right: 1px solid #b13d3d;
+  clear: both;
+  width: 140px;
+  
+}
+
+#topnav ul .hasChildren ul a:link,
+#topnav ul .hasChildren ul a:visited {
+  float: left;
+  width: 129px;
+  background: #900;
+  padding: 3px 3px 3px 8px ;
+  text-decoration: none;
+  text-align: left;
+  color: #fff;
+}
+
+#topnav ul .hasChildren ul a:hover {
+  background: #fff;
+  color: #900;
+}
+
+/* ==|== primary styles =====================================================
+   Author: Paul Cook
+   ========================================================================== */
+
+.simple_box { border: 1px solid #666; padding: 10px; margin: 10px; }
+.simple_padding { padding: 10px; margin: 10px; }
+
+
+/* ==|== non-semantic helper classes ======================================== */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+/* ==|== media queries ====================================================== */
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+
+/* ==|== print styles ======================================================= */
+ 
+@media print {
+  
+}

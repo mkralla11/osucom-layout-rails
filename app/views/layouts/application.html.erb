@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title><%= title("FD4ME Learn.Serve.Inspire") %> </title>
+  
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <%= stylesheet_link_tag "application" %>
+  <%= stylesheet_link_tag "application-print", :media=>:print %>
+  
+  <!--[if IE]>
+      <%= stylesheet_link_tag "application-ie", :media => "all" %>
+  <![endif]-->
+  <%= javascript_include_tag "libs/modernizr-2.0.6.min" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="osumc_brand_header">
+  <%= render :partial=>"shared/admin_menu" %>
+  <ul id="brand">
+    <li class="thissite"><a href="http://medicine.osu.edu">Ohio State's College of Medicine</a></li>
+    <li><a href="http://medicine.osu.edu/faculty/ces/pages/index.aspx">Center for Education and Scholarship</a></li>
+    <li><a href="http://www.osu.edu">Ohio State</a></li>
+  </ul>
+</div>
+
+<div id="container">
+  <div id="header" class="head" role="banner">
+    <a id="osumc_logo" href="http://medicine.osu.edu/">
+      <%= image_tag "layout/logo.png", :alt=>"The Ohio State University College of Medicine" %>
+    </a>
+
+    <!-- navSectionLanding -->
+
+    <a id="osumc_text" href="/"><h1>FD4ME <span>Faculty Development 4 Medical Educators</span></h1></a>
+
+    <div id="aux_topnav">
+      <%= render :partial=>"shared/account_menu" %>
+      <%= form_tag "#search_path",:method=>:get do %>
+        <%= text_field_tag 'site_search', 'Search This Site', :class=>"searchbox" %> <%= submit_tag "",:class=>"searchbutton" %>
+      <% end %>
+    </div>
+    
+    <div id="brand_bar"></div>
+
+  </div><!-- end head -->
+  <div id="topnav" class="navigation" role="navigation">
+    <ul id="nav" role="menu">
+    <%= render :partial=>"shared/main_menu" %>
+    </ul>
+  </div><!-- end topnav -->
+  <div class="body">
+    <div id="content" class="main" role="main">
+    <%= handle_notices %>
+    <%= content_for?(:content) ? yield(:content) : yield %>
+    </div><!-- end main -->
+  </div><!-- end body -->
+</div><!-- end container -->
+
+<div id="footer" class="footer" role="contentinfo">
+  <div id="footer_contact">
+    <p id="footer_address">Copyright&copy;  <a href="">
+      The Ohio State University Medical Center</a><br>
+      370 West 9th Avenue, Columbus, Ohio 43210
+    </p>
+  </div>
+
+  <div id="footer_links">
+    <ul role="menu" class="menu column_1">
+    <%= render :partial=>"shared/main_menu" %>
+    </ul>
+    <ul class="menu column_2">
+      <li><a href="http://medicalcenter.osu.edu">OSU Medical Center</a></li>
+      <li><a href="http://osu.edu/">The Ohio State University</a></li>
+      <li><a href="http://amp.osu.edu/">School of Allied Medical Professions</a></li>
+      <li><a href="http://biomed.osu.edu/">School of Biomedical Science</a></li>
+    </ul>
+  </div>
+</div><!-- end foot -->
+<div id="modal_box">
+&nbsp;
+</div>
+
+<%= debug(params) if Rails.env.development? %>
+
+<%= javascript_include_tag "application" %>
+
+<!--[if lt IE 7 ]>
+  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+<![endif]-->
+</body>
+</html>

@@ -1,0 +1,26 @@
+<div id="admin_menu">
+	<% if current_user and current_user.has_staff_access? %>
+	<button id="admincp_button" role="menuitem" class="">Admin CP</button>
+		<ul id="admincp">
+			<li><%= link_to "Goto Admin CP", admin_path %></li>
+			<% if @page and !@page.new_record? and !@in_page_editor %>
+			<li><%= link_to "Edit Page", edit_page_path(@page) %></li>
+			<% end %>
+			<% if @module and !@module.new_record? %>
+			<% if current_user.is_administrator? %>
+			<li><%= link_to "Edit Module", edit_admin_module_path(@module) %></li>
+			<% end %>
+			<li><%= link_to "Reset Progress", admin_path(:action=>"reset_module_progress",:module=>@module.id) %>
+			<li><% if current_user.has_role? 'testing',@module %>
+				<%= link_to "Exit Testing", admin_path(:action=>"test_mode",:mode=>"off",:module=>@module.id,:from=>request.env['REQUEST_URI']) %>
+				<% else %>
+				<%= link_to "Enter Testing", admin_path(:action=>"test_mode",:mode=>"on",:module=>@module.id,:from=>request.env['REQUEST_URI']) %>
+				<% end %>
+			</li>
+			<% unless @module.sections.empty? %>
+			<li><%= link_to "Edit Inteveractives", interactives_path(@module,@module.sections.first) %></li>
+			<% end %>
+			<% end %>
+		</ul>
+	<% end %>
+</div>

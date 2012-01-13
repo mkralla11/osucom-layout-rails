@@ -1,0 +1,10 @@
+<ul id="account_menu" role="menu">
+  <li role="menuitem"><%= link_to "Your Account", "#account_path" %></li>
+  <li role="menuitem"><%= link_to "Your Modules", "#my_modules_path" %></li>
+  <% if current_user %>
+  <li role="menuitem"><%= link_to "Your Payments", "#orders_path" %></li>
+  <li role="menuitem"><%= link_to "Sign Out", "#logout_path" %></li>
+  <% else %>
+  <li role="menuitem"><%= link_to "Sign In", "#login_path" %></li>
+  <% end %>
+</ul>
