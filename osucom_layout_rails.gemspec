@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name        = "osucom_layout_rails"
   s.version     = OsucomLayoutRails::VERSION
   s.authors     = ["Paul Cook"]
-  s.email       = ["paul.cook@alternateversion.com"]
+  s.email       = ["paul.cook@osumc.edu"]
   s.homepage    = ""
   s.summary     = %q{TODO: Write a gem summary}
   s.description = %q{TODO: Write a gem description}
@@ -21,4 +21,6 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
   # s.add_runtime_dependency "rest-client"
+  
+  s.add_dependency "rake"
 end
