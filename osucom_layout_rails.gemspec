@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Paul Cook"]
   s.email       = ["paul.cook@osumc.edu"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{OSU College of Medicine Rails Layout}
+  s.description = %q{OSU College of Medicine layout translated into a responsive design and packaged into a rails gem for use as a layout for rails project.}
 
   s.rubyforge_project = "osucom_layout_rails"
 
