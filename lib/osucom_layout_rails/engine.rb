@@ -1,3 +1,5 @@
+require "osucom_layout_rails/app_controller"
+
 module OsucomLayoutRails
   class Engine < Rails::Engine
     initializer 'myengine.app_controller' do |app|
