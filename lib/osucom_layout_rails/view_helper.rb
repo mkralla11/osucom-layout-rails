@@ -1,5 +1,5 @@
 module OsucomLayoutRails
-  module ViewHelper
+  module ViewHelpers
     def title(default)
       @title && "#{@title} | #{default}" || default
     end
