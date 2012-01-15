@@ -15,12 +15,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   
   <%= stylesheet_link_tag "application" %>
-  <%= stylesheet_link_tag "application-print", :media=>:print %>
+  <%= stylesheet_link_tag "osucom_layout_rails/application-print", :media=>:print %>
   
   <!--[if IE]>
-      <%= stylesheet_link_tag "application-ie", :media => "all" %>
+      <%= stylesheet_link_tag "osucom_layout_rails/application-ie", :media => "all" %>
   <![endif]-->
-  <%= javascript_include_tag "libs/modernizr-2.0.6.min" %>
+  
+  <%= javascript_include_tag "osucom_layout_rails/libs/modernizr-2.0.6.min" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -42,7 +43,7 @@
 
     <!-- navSectionLanding -->
 
-    <a id="osumc_text" href="/"><h1>FD4ME <span>Faculty Development 4 Medical Educators</span></h1></a>
+    <a id="osumc_text" href="/"><h1>Site Title <span>Site Sub-Title Catch Phrase</span></h1></a>
 
     <div id="aux_topnav">
       <%= render :partial=>"shared/account_menu" %>
