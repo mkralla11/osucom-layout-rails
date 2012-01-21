@@ -5,11 +5,11 @@ module OsucomLayoutRails
     end
     
     def header_title
-      Rails::Application.config.osucom_layout.header_title
+      Rails.application.config.osucom_layout.header_title
     end
     
     def header_subtitle
-      Rails::Application.config.osucom_layout.header_subtitle
+      Rails.application.config.osucom_layout.header_subtitle
     end
   end
 end
