@@ -6,6 +6,7 @@ module OsucomLayoutRails
     initializer 'myengine.app_controller' do |app|
       app.config.assets.precompile += ['application-ie.css','application-print.css']
       
+      app.config.osucom_layout = ActiveSupport::OrderedOptions.new
       app.config.osucom_layout.site_title = "OSUCOM Layout"
       app.config.osucom_layout.header_title = "OSU COM"
       app.config.osucom_layout.header_subtitle = "College of Medicine"
