@@ -2,10 +2,9 @@ require "osucom_layout_rails/app_controller"
 
 module OsucomLayoutRails
   class Engine < Rails::Engine
+    Rails.application.config.assets.precompile += ['application-ie.css','application-print.css', 'modernizr-2.0.6.min.js' ]
     
     initializer 'myengine.app_controller' do |app|
-      app.config.assets.precompile += ['application-ie.css','application-print.css', 'modernizr-2.0.6.min.js' ]
-      
       app.config.osucom_layout = ActiveSupport::OrderedOptions.new
       app.config.osucom_layout.site_title = "OSUCOM Layout"
       app.config.osucom_layout.header_title = "OSU COM"
