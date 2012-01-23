@@ -4,7 +4,7 @@ module OsucomLayoutRails
   class Engine < Rails::Engine
     
     initializer 'myengine.app_controller' do |app|
-      app.config.assets.precompile += ['application-ie.css','application-print.css']
+      app.config.assets.precompile += ['application-ie.css','application-print.css', 'modernizr-2.0.6.min.js' ]
       
       app.config.osucom_layout = ActiveSupport::OrderedOptions.new
       app.config.osucom_layout.site_title = "OSUCOM Layout"
