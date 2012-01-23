@@ -44,7 +44,7 @@ a:hover {
 #container {
   max-width: 960px;
   min-height:100px;
-  background:#fff image-url('layout/content_background.jpg') repeat-x top left;
+  background:#fff url(image-path('layout/content_background.jpg')) repeat-x top left;
   border-top:2px solid #990000;
   border-right:1px solid #ccc;
   border-bottom:1px solid #ccc;
@@ -106,19 +106,19 @@ a:hover {
 }
 
 #osumc_brand_header ul#brand li.thissite {
-  background: image-url('layout/thissite_button_background_static.png') no-repeat left top;
+  background: url(image-path('layout/thissite_button_background_static.png')) no-repeat left top;
   padding:0px 0px 0px 4px;
   margin:0px 6px 0px 0px;
 }
 
 #osumc_brand_header ul#brand li.thissite a{
-  background: image-url('layout/thissite_button_background_static.png') no-repeat right top;
+  background: url(image-path('layout/thissite_button_background_static.png')) no-repeat right top;
   padding:1px 10px 2px 6px;
   margin:0px -4px 0px 0px
 }
 
 #osumc_brand_header ul#brand li.thissite_divider {
-  background: image-url('layout/thissite_divider.jpg') no-repeat center right;
+  background: url(image-path('layout/thissite_divider.jpg')) no-repeat center right;
 }
 
 #osumc_brand_header ul#functions {
@@ -214,7 +214,7 @@ a#osumc_text p {
   height: 21px;
   margin: 0px;
   border: none;
-  background: image-url('layout/go_button.jpg') no-repeat center center;
+  background: url(image-path('layout/go_button.jpg')) no-repeat center center;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -222,7 +222,7 @@ a#osumc_text p {
 #brand_bar {
   width: 97.9166666666667%; /* 940px / 960px */
   margin:0px auto 0px auto;
-  background:#990000 image-url('layout/brand_colors.gif') no-repeat top left;
+  background:#990000 url(image-path('layout/brand_colors.gif')) no-repeat top left;
   height:4px;
   position:relative;
   clear:both;
@@ -316,7 +316,7 @@ a#osumc_text p {
 }
 
 #footer_links ul.column_1 {
-  background: image-url('layout/footer_links_divider.jpg') no-repeat center right;
+  background: url(image-path('layout/footer_links_divider.jpg')) no-repeat center right;
   padding:0px 15px 0px 0px;
 }
 
@@ -342,7 +342,7 @@ a#osumc_text p {
 #topnav {
   width: 97.9166666666667%; /* 940px / 960px */
   height:39px;
-  background: image-url('layout/topnav_shine.jpg') repeat-x top left;
+  background: url(image-path('layout/topnav_shine.jpg')) repeat-x top left;
   margin:1px auto 0px auto;
   ul {
     margin:0px 3px 0px 3px;
@@ -351,7 +351,7 @@ a#osumc_text p {
     width: 99.1489361702128%; /* 932px / 940px */
     height: 39px;
     list-style:none;
-    background: image-url('layout/topnav_shine.jpg') repeat-x center center;
+    background: url(image-path('layout/topnav_shine.jpg')) repeat-x center center;
     position: relative;
     z-index:10;
     li {
@@ -363,7 +363,7 @@ a#osumc_text p {
       margin:0px;
       padding:0px;
       font-size:  0.75em; /* 12px / 16px */
-      background: image-url('layout/topnav_divider.png') no-repeat scroll right 4px transparent;
+      background: url(image-path('layout/topnav_divider.png')) no-repeat scroll right 4px transparent;
       a {
         text-decoration:none;
         color:#fff;
@@ -373,7 +373,7 @@ a#osumc_text p {
       }
       a:hover {
         color:#990000;
-        background: image-url('layout/topnav_active.png') repeat-x left bottom;
+        background: url(image-path('layout/topnav_active.png')) repeat-x left bottom;
       }
     }
     li.double a {
@@ -382,7 +382,7 @@ a#osumc_text p {
     }
     li.current a {
       color:#990000;
-      background: image-url('layout/topnav_active.png') repeat-x center bottom;
+      background: url(image-path('layout/topnav_active.png')) repeat-x center bottom;
     }
   }
 }
