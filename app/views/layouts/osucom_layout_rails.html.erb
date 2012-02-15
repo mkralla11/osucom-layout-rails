@@ -7,11 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   
-  <%= content_for?(:head) ? yield(:head) : render(:partial=>"layouts/default_head") %>
-  
-  <%= stylesheet_link_tag "application" %>
-  
-  <%= javascript_include_tag "application" %>
+  <%= content_for?(:head) ? yield(:head) : render(:partial=>"shared/default_head") %>
   
   <%= csrf_meta_tags %>
 </head>
