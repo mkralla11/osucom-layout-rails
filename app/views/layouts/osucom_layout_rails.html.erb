@@ -27,7 +27,11 @@
 
 <div id="container">
   <div id="header" class="head" role="banner">
-    <%= render "shared/header" %>
+    <% content_for :default_header do %>
+      <%= render(:partial=>"shared/default_header") %>
+    <% end %>
+    <%= content_for?(:header) ? yield(:header) : yield(:default_header) %>
+    
     <div id="brand_bar"></div>
 
   </div><!-- end head -->
