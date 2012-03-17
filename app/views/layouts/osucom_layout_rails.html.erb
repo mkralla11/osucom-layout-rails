@@ -39,7 +39,10 @@
   </div><!-- end head -->
   <div id="topnav" class="navigation" role="navigation">
     <ul id="nav" role="menu">
-      <%= render :partial=>"shared/main_menu" %>
+      <% content_for :default_main_menu do %>
+        <%= render :partial=>"shared/main_menu" %>
+      <% end %>
+      <%= content_for?(:main_menu) ? yield(:main_menu) : yield(:default_main_menu) %>
     </ul>
   </div><!-- end topnav -->
   <div class="body">
