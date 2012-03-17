@@ -62,7 +62,10 @@
 
   <div id="footer_links">
     <ul role="menu" class="menu column_1">
-    <%= render :partial=>"shared/main_menu" %>
+      <% content_for :default_footer_menu do %>
+        <%= render :partial=>"shared/footer_menu" %>
+      <% end %>
+      <%= content_for?(:footer_menu) ? yield(:footer_menu) : yield(:default_footer_menu) %>
     </ul>
     <ul class="menu column_2">
       <li><a href="http://medicalcenter.osu.edu">OSU Medical Center</a></li>
