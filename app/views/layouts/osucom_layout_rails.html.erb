@@ -29,18 +29,10 @@
 
 <div id="container">
   <div id="header" class="head" role="banner">
-    <a id="osumc_logo" href="http://medicine.osu.edu/">
-      <%= image_tag "layout/logo.png", :alt=>"The Ohio State University College of Medicine" %>
-    </a>
-
-    <!-- navSectionLanding -->
-
-    <a id="osumc_text" href="/"><h1><span><%= header_title %></span> <span class="subtitle"><%= header_subtitle %></span></h1></a>
-
-    <div id="aux_topnav">
-      <%= render :partial=>"shared/account_menu" %>
-      <%= render "shared/search_form" %>
-    </div>
+    <% content_for :default_header do %>
+      <%= render(:partial=>"shared/default_header") %>
+    <% end %>
+    <%= content_for?(:header) ? yield(:header) : yield(:default_header) %>
     
     <div id="brand_bar"></div>
 
