@@ -16,7 +16,7 @@
 <body>
 
 <div id="osumc_brand_header">
-  <% content_for :default_brand_header %>
+  <% content_for :default_brand_header do %>
     <%= render :partial=>"shared/admin_menu" %>
     <ul id="brand">
       <li class="thissite"><a href="http://medicine.osu.edu">Ohio State's College of Medicine</a></li>
