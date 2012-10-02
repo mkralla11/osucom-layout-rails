@@ -8,6 +8,13 @@ Installation
 
 `gem 'osucom_layout_rails', :git=>'git@github.com:osuogg/osucom-layout-rails.git'`
 
+Setup
+-----
+
+To use the layout insert this at the end of your application.html.erb file:
+
+`<%= render :template=>"layouts/osucom_layout_rails" %>`
+
 
 Configuration
 -------------
@@ -28,4 +35,10 @@ Page Titles
 
 You can supply a page title for use in the head tag by setting a @title variable.  The layout comes with a title helper that is used in the layout file. It looks for the @title variable and concats it with the default site title if present using a | as the separator.  Otherwise it displays the site title from configuration.
     
+
 That's all there is for now.
+
+Release Notes:
+--------------
+
+v1.0.0 This is the final version before Zurb Foundation was integrated as base framework

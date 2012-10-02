@@ -11,5 +11,9 @@ module OsucomLayoutRails
     def header_subtitle
       Rails.application.config.osucom_layout.header_subtitle
     end
+    
+    def meta_content(name)
+      
+    end
   end
 end
