@@ -15,5 +15,9 @@ module OsucomLayoutRails
     def meta_content(name)
       
     end
+    
+    def admin_title(default)
+      @admin_title && "#{@admin_title} Admin" || default
+    end
   end
 end

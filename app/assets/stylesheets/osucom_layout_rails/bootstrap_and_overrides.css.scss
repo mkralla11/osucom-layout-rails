@@ -1,0 +1,6 @@
+// import original bootstrap
+@import "twitter/bootstrap";
+@import "twitter/bootstrap-responsive";
+
+a.btn-primary, a.btn-success, a.btn-info, a.btn-warning, a.btn-danger, a.btn-inverse { color: #FFF; }
+.btn-toolbar { margin: 0; }

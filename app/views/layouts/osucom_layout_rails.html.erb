@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -15,39 +15,35 @@
   <%= yield :meta_tags %>
   
   <%= stylesheet_link_tag "application" %>
-  
-  <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-  <![endif]-->
+  <%= javascript_include_tag "osucom_layout_rails/modernizr" %>
     
   <%= yield(:head) %>
   
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+  <![endif]-->
+  <%= content_for?(:admin_bar) ? yield(:admin_bar) : render("shared/admin_bar") %>
+  
   <div id="osumc_brand_header">
     <%= content_for?(:brand_header) ? yield(:brand_header) : "" %>
   </div>
 
   <div id="container">
     <header id="page-header" role="banner">
-      <% content_for :default_header do %>
-        <%= render(:partial=>"shared/default_header") %>
-      <% end %>
-      <%= content_for?(:header) ? yield(:header) : yield(:default_header) %>
+
+      <%= content_for?(:header) ? yield(:header) : render(:partial=>"shared/header") %>
     
       <div id="brand_bar"></div>
-
+      <nav id="topnav" class="navigation" role="navigation">
+        <ul id="nav" role="menu">
+          <%= content_for?(:main_menu) ? yield(:main_menu) : render("shared/main_menu") %>
+        </ul>
+      </nav><!-- end topnav -->
     </header><!-- end head -->
-    <nav id="topnav" class="navigation" role="navigation">
-      <ul id="nav" role="menu">
-        <% content_for :default_main_menu do %>
-          <%= render :partial=>"shared/main_menu" %>
-        <% end %>
-        <%= content_for?(:main_menu) ? yield(:main_menu) : yield(:default_main_menu) %>
-      </ul>
-    </nav><!-- end topnav -->
+    
     <div class="body">
       <div id="content" class="main" role="main">
       <%= content_for?(:content) ? yield(:content) : yield %>
@@ -56,26 +52,27 @@
   </div><!-- end container -->
 
   <footer id="page-footer" role="contentinfo">
-    <div id="footer_contact">
+    <div id="footer_contact" class="clearfix">
       <p id="footer_address">Copyright&copy;  <a href="http://medicalcenter.osu.edu">
         The Ohio State University Wexner Medical Center</a><br>
         370 West 9th Avenue, Columbus, Ohio 43210
       </p>
     </div>
 
-    <div id="footer_links">
-      <ul role="menu" class="menu column_1">
-        <% content_for :default_footer_menu do %>
-          <%= render :partial=>"shared/footer_menu" %>
-        <% end %>
-        <%= content_for?(:footer_menu) ? yield(:footer_menu) : yield(:default_footer_menu) %>
+    <div id="footer_links" class="clearfix">
+      <ul class="column_1">
+        <%= content_for?(:footer_menu) ? yield(:footer_menu) : render(:partial=>"shared/footer_menu") %>
       </ul>
-      <ul class="menu column_2">
+      <ul class="column_2">
         <li><a href="http://medicalcenter.osu.edu">Ohio State's Wexner Medical Center</a></li>
         <li><a href="http://osu.edu/">The Ohio State University</a></li>
         <li><a href="http://amp.osu.edu/">School of Allied Medical Professions</a></li>
         <li><a href="http://biomed.osu.edu/">School of Biomedical Science</a></li>
       </ul>
+    </div>
+    
+    <div id="footer_logos" class="clearfix">
+      <%= link_to image_tag("layout/ogg-logo-small.png", :size=>"150x74"), "http://ogg.osu.edu" %>
     </div>
   </footer><!-- end foot -->
   <div id="modal_box">
@@ -87,12 +84,8 @@
 <%= javascript_include_tag "application" %>
 
 <%= yield(:footer_js) %>
-<%= yield(:google_analytics) %>
 
-<!--[if lt IE 7 ]>
-  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-<![endif]-->
+<%= yield(:google_analytics) %>
 
 </body>
 </html>
