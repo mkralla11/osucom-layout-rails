@@ -79,7 +79,7 @@
   &nbsp;
   </div>
 
-<%= debug(params) if Rails.env.development? %>
+<%= debug(params) if Rails.application.config.show_debug and Rails.env.development? %>
 
 <%= javascript_include_tag "application" %>
 
