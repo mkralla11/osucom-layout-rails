@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   # s.add_runtime_dependency "rest-client"
   s.add_dependency("railties", "~> 3.2")
   #s.add_dependency "rake"
-  s.add_dependency 'compass-rails'
+  #s.add_dependency 'compass-rails'
   s.add_dependency 'anjlab-bootstrap-rails', '>= 2.1'
   s.add_dependency 'font-awesome-sass-rails'
 end

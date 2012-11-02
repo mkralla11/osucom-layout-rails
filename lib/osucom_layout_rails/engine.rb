@@ -1,16 +1,24 @@
-require 'compass-rails'
+#require 'compass-rails'
 require 'bootstrap-rails'
 require "osucom_layout_rails/app_controller"
 
 module OsucomLayoutRails
   class Engine < Rails::Engine
     
-    initializer "precompile", :group => :all do |app|
-      app.config.assets.precompile += ['application-ie.css','application-print.css', 'modernizr.js', 'modernizr-2.0.6.min.js' ]
+    initializer "osucom_layout_rails.assets.precompile", :group => :all do |app|
+      Rails.application.config.assets.precompile += [
+        'osucom_layout_rails/application-ie.css',
+        'osucom_layout_rails/application-print.css', 
+        'osucom_layout_rails/index.css', 
+        'osucom_layout_rails/index.js', 
+        'osucom_layout_rails/modernizr.js', 
+        'osucom_layout_rails/modernizr-2.0.6.min.js',
+        'ogg_admin/index.css' 
+      ]
     end
     
-    initializer 'myengine.app_controller' do |app|
-      app.config.assets.paths << File.expand_path("../../vendor/assets/fonts",__FILE__)
+    initializer 'osucom_layout_rails.app_controller' do |app|
+      #app.config.assets.paths << File.expand_path("../../vendor/assets/fonts",__FILE__)
       app.config.osucom_layout = ActiveSupport::OrderedOptions.new
       app.config.osucom_layout.site_title = "OSUCOM Layout"
       app.config.osucom_layout.header_title = "OSU COM"
