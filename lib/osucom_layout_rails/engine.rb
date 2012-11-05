@@ -24,6 +24,7 @@ module OsucomLayoutRails
       app.config.osucom_layout.header_title = "OSU COM"
       app.config.osucom_layout.header_subtitle = "College of Medicine"
       app.config.show_debug = false
+      
       ActiveSupport.on_load(:action_controller) do
         helper_method "current_user", "logged_in?"
         include OsucomLayoutRails::AppController::InstanceMethods
