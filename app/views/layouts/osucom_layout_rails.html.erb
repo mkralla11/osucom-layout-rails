@@ -64,10 +64,7 @@
         <%= content_for?(:footer_menu) ? yield(:footer_menu) : render(:partial=>"shared/footer_menu") %>
       </ul>
       <ul class="column_2">
-        <li><a href="http://medicalcenter.osu.edu">Ohio State's Wexner Medical Center</a></li>
-        <li><a href="http://osu.edu/">The Ohio State University</a></li>
-        <li><a href="http://amp.osu.edu/">School of Allied Medical Professions</a></li>
-        <li><a href="http://biomed.osu.edu/">School of Biomedical Science</a></li>
+        <%= content_for?(:footer_links) ? yield(:footer_links) : render(:partial=>"shared/footer_links") %>
       </ul>
     </div>
     

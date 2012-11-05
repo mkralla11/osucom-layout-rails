@@ -50,6 +50,9 @@ a:active {
 a:link {
   color:#990000;
   text-decoration:none;
+  &.btn-primary,
+  &.btn-success,
+  &.btn-info, &.btn-warning, &.btn-danger, &.btn-inverse { color: #FFF; }
 }
 
 a:visited {
