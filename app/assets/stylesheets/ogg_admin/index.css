@@ -4,5 +4,6 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
  *= require ../osucom_layout_rails/bootstrap_and_overrides
+ *= require _font-awesome
  *= require_tree ./admin
 */

@@ -1,6 +1,5 @@
 #require 'compass-rails'
 require 'bootstrap-rails'
-require 'font-awesome'
 require "osucom_layout_rails/app_controller"
 
 module OsucomLayoutRails
