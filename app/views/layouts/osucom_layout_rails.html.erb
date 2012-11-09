@@ -72,8 +72,17 @@
       <%= link_to image_tag("layout/ogg-logo-small.png", :size=>"150x74"), "http://ogg.osu.edu" %>
     </div>
   </footer><!-- end foot -->
-  <div id="modal_box">
-  &nbsp;
+  <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel"></h3>
+    </div>
+    <div class="modal-body">
+
+    </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
   </div>
 
 <%= debug(params) if Rails.application.config.show_debug and Rails.env.development? %>
