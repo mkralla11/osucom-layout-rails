@@ -447,6 +447,21 @@ footer:after {
 .simple_padding { padding: 10px; margin: 10px; }
 
 
+/* ==|== Media styles =====================================================
+   Author: Mike Khirallah
+   ========================================================================== */
+
+
+
+.center-iframe {
+    display:block;
+    margin:0px auto;
+}
+
+
+
+
+
 /* ==|== non-semantic helper classes ======================================== */
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
 .ir br { display: none; }
