@@ -239,7 +239,7 @@ header#page-header {
     cursor: pointer;
   }
   #brand_bar {
-    width: 97.9166666666667%; /* 940px / 960px */
+    width: 100%; /*was 97.9166666666667% */  /* 940px / 960px */
     margin:0px auto 0px auto;
     background:#990000 asset-data-url('layout/brand_colors.gif') no-repeat top left;
     height:4px;
